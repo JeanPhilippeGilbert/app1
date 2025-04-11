@@ -24,7 +24,7 @@ export default function SettingsScreen({ navigation }) {
   }, [value]);
 
   return (
-    <View style={styles.container}>
+    <View style={{...styles.container, backgroundColor: person?.couleur || '#ffffff'}}>
       <Text>Modifier la couleur de fond</Text>
       <DropDownPicker
         open={open}
