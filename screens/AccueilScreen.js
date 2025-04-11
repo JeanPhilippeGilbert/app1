@@ -42,7 +42,7 @@ export default function AccueilScreen() {
       <Pressable onPress={handleLogin} style={styles.button}>
         <Text style={styles.buttonText}>Se connecter</Text>
       </Pressable>
-      <Text style={styles.footer}>Jean-Philippe</Text>
+      <Text style={styles.footer}>Jean-Philippe + Tristan</Text>
     </View>
   );
 }
