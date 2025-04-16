@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { PersonProvider } from './context/PersonContext'; // Contexte global
-import ProfileStack from './screens/ProfileStack'; // Stack pour les profils
-import CameraScreen from './screens/CameraScreen'; // Écran caméra
-import AudioScreen from './screens/AudioScreen'; // Écran audio
+import { PersonProvider } from './context/PersonContext'; 
+import ProfileStack from './screens/ProfileStack'; 
+import CameraScreen from './screens/CameraScreen'; 
+import AudioScreen from './screens/AudioScreen'; 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
