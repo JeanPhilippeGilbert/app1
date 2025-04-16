@@ -1,18 +1,30 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from "react";
 
-export const PersonContext = createContext();
+const initalValues = {
+  nom: "",
+  motDePasse: "",
+  image: null,
+  audio: null,
+  couleur: "#ffffff",
+  loggedIn: false,
+  setLoggedIn: () => {},
+};
+export const PersonContext = createContext(initalValues);
 
 export const PersonProvider = ({ children }) => {
+  const [loggedIn, setLoggedIn] = useState(false);
   const [person, setPerson] = useState({
-    nom: '',
-    motDePasse: '',
+    nom: "",
+    motDePasse: "",
     image: null,
     audio: null,
-    couleur: '#ffffff',
+    couleur: "#ffffff",
   });
 
   return (
-    <PersonContext.Provider value={{ person, setPerson }}>
+    <PersonContext.Provider
+      value={{ person, setPerson, loggedIn, setLoggedIn }}
+    >
       {children}
     </PersonContext.Provider>
   );
