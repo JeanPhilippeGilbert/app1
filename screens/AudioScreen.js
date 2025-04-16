@@ -1,10 +1,10 @@
 // screens/AudioScreen.js
-import React, { useState, useContext } from 'react';
-import { View, Button, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Audio } from 'expo-av';
-import { PersonContext } from '../context/PersonContext';
+import React, { useState, useRef, useContext } from "react";
+import { View, Button, Text, StyleSheet } from "react-native";
+import { Audio } from "expo-av";
+import * as FileSystem from "expo-file-system";
+import { PersonContext } from "../context/PersonContext";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
 export default function AudioScreen() {
   const [recording, setRecording] = useState(null);
   const [uri, setUri] = useState(null);
@@ -23,7 +23,7 @@ export default function AudioScreen() {
       );
       setRecording(recording);
     } catch (err) {
-      console.error('Failed to start recording', err);
+      console.error("Failed to start recording", err);
     }
   };
 
@@ -46,9 +46,16 @@ export default function AudioScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        ...styles.container,
+        backgroundColor: person?.couleur || "#ffffff",
+      }}
+    >
       <Button
-        title={recording ? 'Arrêter l’enregistrement' : 'Commencer l’enregistrement'}
+        title={
+          recording ? "Arrêter l’enregistrement" : "Commencer l’enregistrement"
+        }
         onPress={recording ? stopRecording : startRecording}
       />
 
@@ -71,8 +78,8 @@ export default function AudioScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 20,
   },
   audioControls: {

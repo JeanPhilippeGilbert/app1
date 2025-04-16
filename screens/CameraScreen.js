@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { CameraView, useCameraPermissions } from 'expo-camera';
-import * as MediaLibrary from 'expo-media-library';
-import { PersonContext } from '../context/PersonContext';
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import React, { useState, useEffect, useContext, useRef } from "react";
+import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { CameraView, useCameraPermissions } from "expo-camera";
+import * as MediaLibrary from "expo-media-library";
+import { PersonContext } from "../context/PersonContext";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function CameraScreen() {
   const [permission, requestPermission] = useCameraPermissions();
