@@ -1,4 +1,4 @@
-// screens/SettingsScreen.js
+
 import React, { useContext, useLayoutEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';

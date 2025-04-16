@@ -1,6 +1,6 @@
 // screens/AudioScreen.js
 import React, { useState, useRef, useContext } from "react";
-import { View, Button, Text, StyleSheet } from "react-native";
+import { View, Button, Text, StyleSheet,TouchableOpacity  } from "react-native";
 import { Audio } from "expo-av";
 import * as FileSystem from "expo-file-system";
 import { PersonContext } from "../context/PersonContext";

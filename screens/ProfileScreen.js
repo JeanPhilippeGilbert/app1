@@ -1,4 +1,4 @@
-// screens/ProfileScreen.js
+
 import React, { useContext } from "react";
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import { PersonContext } from "../context/PersonContext";

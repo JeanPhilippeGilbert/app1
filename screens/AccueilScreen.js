@@ -1,4 +1,4 @@
-// screens/AccueilScreen.js
+
 import React, { useState, useContext, useEffect } from "react";
 import { View, Text, TextInput, Pressable, StyleSheet } from "react-native";
 import { PersonContext } from "../context/PersonContext";
@@ -17,7 +17,7 @@ export default function AccueilScreen() {
 
       setTimeout(() => {
         navigation.navigate("Profil", { person });
-      }, 100); //this is here to avoid error of navigator not being rendered?
+      }, 100); 
     } else {
       alert("Nom ou mot de passe incorrect");
     }

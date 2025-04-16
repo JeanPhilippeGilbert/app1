@@ -8,9 +8,9 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 export default function CameraScreen() {
   const [permission, requestPermission] = useCameraPermissions();
   const [mediaPermission, setMediaPermission] = useState(false);
-  const [facing, setFacing] = useState('back'); // 'front' or 'back'
-  const [flash, setFlash] = useState('off'); // 'off' or 'on'
-  const [zoom, setZoom] = useState(0); // Valeur entre 0 et 1
+  const [facing, setFacing] = useState('back'); 
+  const [flash, setFlash] = useState('off'); 
+  const [zoom, setZoom] = useState(0); 
   const cameraRef = useRef(null);
   const { person, setPerson } = useContext(PersonContext);
 
